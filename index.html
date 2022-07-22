@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>LofiYahu</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        function play() {
+            let scripts = ['Remember to pray today and give thanks to יהוה!', 'Come, let us sing to יהוה! Let us raise a shout to the Rock of our deliverance. Psalms 95:1']
+            let scripture = document.getElementById("scripture");
+            scripture.innerHTML = scripts[[Math.floor(Math.random() * scripts.length)]];
+
+            let playbtn = document.getElementById("play");
+            let pausebtn = document.getElementById("pause");
+            let coverart = document.getElementById("cover-art");
+            playbtn.classList.add("hidden");
+            pausebtn.classList.remove("hidden");
+            coverart.classList.add("rotate");
+          let audio = document.getElementById("audio");
+          audio.play();
+          audio.volume = 0.3;
+        }
+
+        function pause() {
+            let playbtn = document.getElementById("play");
+            let pausebtn = document.getElementById("pause");
+            playbtn.classList.remove("hidden");
+            pausebtn.classList.add("hidden");
+            
+          let audio = document.getElementById("audio");
+          audio.pause();
+        }
+
+        function next() {
+            let songs = ['https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625187/scratched-record-bakerman-main-version-01-26-6562_qf0m08.mp3', 
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625292/pillow-thoughts-prigida-main-version-02-24-7566_sbbmhz.mp3', 
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625549/kick-back-mountaineer-main-version-01-58-790_dymm4t.mp3', 
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625413/to-you-wherever-you-are-color-parade-main-version-02-45-2270_iwxfiy.mp3', 
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625762/hey-andromeda-mountaineer-main-version-02-20-800_pnzpqr.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625479/coffee-shop-soundroll-main-version-02-49-1849_anddc4.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625210/toy-box-mountaineer-main-version-03-02-8474_zed4to.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625701/its-all-good-tatami-main-version-02-02-2999_cyz0ga.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625818/flamingo-kidcut-main-version-02-38-3185_hvcbt2.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641625962/low-rider-noxz-main-version-02-29-19845_n6vkx4.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641626316/voyage-92elm-main-version-02-39-9736_un98d4.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641998730/fragile-bakerman-main-version-02-20-20666_av9tqd.mp3',
+            'https://res.cloudinary.com/usamobileappsllc/video/upload/v1641999632/caramel-macchiato-noxz-main-version-02-15-19706_k0aldq.mp3'];
+
+            let scripts = [
+                'Serve יהוה with gladness; Come before His presence with singing. Psalms 100:2', 
+                'Come, let us sing to יהוה! Let us raise a shout to the Rock of our deliverance. Psalms 95:1',
+                'But thanks to Elohim who gives us the overcoming through our Master יהושע Messiah. 1 Corinthians 15:57',
+                'in all circumstances give thanks, for this is the desire of Elohim in Messiah יהושע for you. 1 Thessalonians 5:18',
+                'Do not worry at all, but in every matter, by prayer and petition, with thanksgiving, let your requests be made known to Elohim. Phillipians 4:6',
+                'Give thanks to יהוה! For He is good, For His loving-commitment is everlasting. 107:1',
+                'I give thanks to You, For I am awesomely and wondrously made! Wondrous are Your works, And my being knows it well. Psalms 139:14',
+                'We shall give thanks to You, O Elohim, we shall give thanks! And Your Name is near! Your wonders shall be declared! Psalms 75:1',
+                'Give thanks to יהוה! Call upon His Name, Make known His deeds among the peoples. Psalms 105:1',
+                'At midnight I rise to give thanks to You, For Your righteous right-rulings. Psalms 119:62',
+                'And now, our Elohim, we thank You and praise Your comely Name. 1 Chronicles 29:13',
+                'I am the good shepherd. The good shepherd lays down His life for the sheep. John 10:11',
+                'My sheep hear My voice, and I know them, and they follow Me. John 10:27',
+                'For thus said the Master יהוה, “See, I Myself shall search for My sheep and seek them out. Ezekiel 34:11',
+                'I have strayed like a lost sheep; Seek Your servant, For I have not forgotten Your commands. Psalms 119:76'
+
+            ];
+
+            let audio = document.getElementById("audio");
+            let scripture = document.getElementById("scripture");
+            scripture.innerHTML = scripts[[Math.floor(Math.random() * scripts.length)]];
+
+
+            let imagelist = ['https://res.cloudinary.com/usamobileappsllc/image/upload/v1658448233/Tech_Dads_2_y8ydme.jpg', 'https://res.cloudinary.com/usamobileappsllc/image/upload/v1658448231/Tech_Dads_1_kfvhcz.jpg', 'https://res.cloudinary.com/usamobileappsllc/image/upload/v1658448195/Tech_Dads_sbqyyz.jpg', 'https://res.cloudinary.com/usamobileappsllc/image/upload/v1658107720/freight-img_16_g76gsq.png'];
+            let image = document.getElementById("cover-art");
+            image.src = imagelist[[Math.floor(Math.random() * imagelist.length)]];
+            image.classList.add('transition');
+
+            let playbtn = document.getElementById("play");
+            let pausebtn = document.getElementById("pause");
+            playbtn.classList.add("hidden");
+            pausebtn.classList.remove("hidden");
+            
+            let song = (songs[Math.floor(Math.random() * songs.length)]);
+            audio.src = song;
+            audio.play();
+    
+          
+
+        }
+
+        function loop() {
+    
+            let audio = document.getElementById("audio");
+            
+            let loop = document.getElementById("loop");
+            if (loop.classList.contains("opacity-100")) {
+            loop.classList.remove("opacity-100");
+            audio.setAttribute('loop','false')
+            
+            ;}
+
+            else {
+                loop.classList.add("opacity-100");  
+                audio.setAttribute('loop','true')
+            }
+
+    
+
+          
+
+        }
+
+
+      </script>
+
+    <audio loop id="audio" src="https://res.cloudinary.com/usamobileappsllc/video/upload/v1641999239/alleyways-color-parade-main-version-02-33-2224_ofj0i5.mp3"></audio>
+
+    <header>
+        <div class="logo">
+            <img id="image" src="https://res.cloudinary.com/usamobileappsllc/image/upload/v1658116574/Yahlicious_4_srkdgz.png" width="200px" alt="">
+        </div>
+        <div class="nav hidden">
+            <ul>
+                <a><li>Chill</li></a>
+                <a><li>Focus</li></a>
+                <a><li>Brainstorm</li></a>
+                <a><li>Meditate</li></a>
+                <a><li>Nature</li></a>
+                <a><li>Energize</li></a>
+                <a><li>Destress</li></a>
+                <a><li>All</li></a>
+            </ul>
+        </div>
+    </header>
+    <div class="player">
+        <div class="img-div">
+            <img class="cover-art" id="cover-art" src="https://res.cloudinary.com/usamobileappsllc/image/upload/v1658107720/freight-img_16_g76gsq.png" width="150px" alt="">
+        </div>
+       <div class="song-info">
+        <p class="song-name" id="scripture"></p>
+           
+        </div>
+        <div class="controls">
+            <button id="play" class="play" type="button" value="PLAY" onclick="play()"><i class="fas fa-play"></i></button>
+            <button id="pause" class="pause hidden" type="button" value="PAUSE" onclick="pause()"><i class="fas fa-pause"></i></button>
+            <button class="next" onclick="next()"><i class="fas fa-forward"></i></button>
+
+        </div>
+
+    </div>
+</body>
+</html>
